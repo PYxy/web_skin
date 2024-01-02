@@ -22,13 +22,10 @@
 #### 运行说明
 ```text
 当前测试所需模块(widdow python3.7可能有遗漏 按需安装)
-django                 3.2.23
-celery                 5.2.7
-django-celery          3.3.1
-django-celery-beat     1.5.0
-redis                  5.0.1 
-pyMySQL                1.1.1
-eventlet               0.34.2
+导出模块
+pip freeze > requestments.txt
+导入模块
+pip install -r  requestments.txt
 
 
 cd  到 manage.py 的目录

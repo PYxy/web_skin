@@ -11,8 +11,8 @@ platforms.C_FORCE_ROOT = True
 
 
 class CeleryConfig(object):
-    BROKER_URL = 'redis://xx.xx.xx.xx:6379/5'
-    CELERY_RESULT_BACKEND = 'redis://xx.xx.xx.xx:6379/6'
+    BROKER_URL = 'redis://120.132.118.90:58247/5'
+    CELERY_RESULT_BACKEND = 'redis://120.132.118.90:58247/6'
     CELERY_TASK_SERIALIZER = 'json'  # " json从4.0版本开始默认json,早期默认为pickle（可以传二进制对象）
     CELERY_RESULT_SERIALIZER = 'json'
     CELERY_ACCEPT_CONTENT = ['json', 'pickle']

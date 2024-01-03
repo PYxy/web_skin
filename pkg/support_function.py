@@ -11,6 +11,7 @@ def param_change(requests):
        :return:
        """
     # method_type = None
+    # get 请求不接收request body 参数
     if requests.method == "GET":
         # uri 参数
         method_type = requests.GET

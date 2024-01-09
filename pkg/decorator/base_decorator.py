@@ -77,14 +77,15 @@ def check_sync(logger, title):
                 errmsg = str(e)
                 logger.error(f'line(check_sync)>> {str(e.__traceback__.tb_lineno)} =>{errmsg}')
                 code, kwargs['errmsg'] = 0, errmsg
+
             finally:
                 if not code:
-                    # 可以直接响应
+                    # 有异常就直接响应
                     return {"code": code, "errmsg": errmsg}
-                    pass
-                # 打印检测后 最新的参数,再交给下一个函数继续执行
-                logger.debug(kwargs)
-                return func(**kwargs)
+                else:
+                    # 打印检测后 最新的参数,再交给下一个函数继续执行
+                    logger.debug(kwargs)
+                    return func(**kwargs)
 
         return pick
 

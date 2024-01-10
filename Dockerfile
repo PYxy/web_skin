@@ -1,5 +1,5 @@
 FROM python:3.6.8-slim-stretch
-RUN mkdir -p /etc/apk/repositories
+RUN mkdir -p /etc/apk
 RUN echo -e http://mirrors.ustc.edu.cn/alpine/v3.6/main/ > /etc/apk/repositories
 RUN apk add --no-cache gcc musl-dev linux-headers
 
